@@ -22,7 +22,7 @@ class Solution:
 
     def contains_duplicate_brute_force(self, nums: List[int]) -> bool:
         # brute force -> not recommended
-        # Time O(n*log(n))
+        # Time O(n*n)
         # memory O(1)
         size = len(nums)
         if size == 0 or size == 1: return True

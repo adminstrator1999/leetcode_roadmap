@@ -22,7 +22,7 @@ class Solution:
             hashmap[num] = i
 
     def two_sum_brute_force(self, nums: List[int], target: int) -> List[int]:
-        # time O(nlogn)
+        # time O(n*n)
         # memory O(1)
         size = len(nums)
         for i in range(size - 1):
