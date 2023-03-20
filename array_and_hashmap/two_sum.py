@@ -21,4 +21,13 @@ class Solution:
                 return [i, hashmap[target-num]]
             hashmap[num] = i
 
+    def two_sum_brute_force(self, nums: List[int], target: int) -> List[int]:
+        # time O(nlogn)
+        # memory O(1)
+        size = len(nums)
+        for i in range(size - 1):
+            for j in range(i+1, size):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+
 
