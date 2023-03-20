@@ -9,10 +9,9 @@ from collections import Counter
 
 
 class Solution:
-    def is_anagram(self, s: str, t: str) -> bool:
 
-    def is_anagram_with_sorting(self, s: str, t: str) -> bool:
-        # not recommended
+    def is_anagram(self, s: str, t: str) -> bool:
+        # memory O(1) maybe it is related to the sorting function
         # min time for sorting is O(nlog(n))
         return sorted(s) == sorted(t)
 
