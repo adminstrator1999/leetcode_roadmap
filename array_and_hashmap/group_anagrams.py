@@ -5,11 +5,22 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 https://leetcode.com/problems/group-anagrams/
 """
 from typing import List
-from collections import Counter
+from collections import defaultdict
 
 
 class Solution:
     def group_anagrams(self, strs: List[str]) -> List[List[str]]:
+        # time O(n*m)
+        # memory O(n*m)
+        res = defaultdict(list)
+        for s in strs:
+            count = [0] * 26
+            for ch in s:
+                count[ord(ch)-ord('a')] += 1
+            res[tuple(count)].append(s)
+        return list(res.values())
+
+    def group_anagrams_hashmap(self, strs: List[str]) -> List[List[str]]:
         # time O(n*mlogm) ish not sure though because elements inside the list matters
         # memory O(n*m)
         # besides we can use key as a tuple also like tuple(sorted(text)) it makes little difference
