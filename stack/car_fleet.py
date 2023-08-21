@@ -46,7 +46,7 @@ class Solution:
 
             for i in range(len(data)):
                 new_position = data[i][0] + data[i][1]
-                data[i] = (new_position, data[i][1])  
+                data[i] = (new_position, data[i][1])
 
             while data and data[-1][0] >= target:
                 data.pop()
